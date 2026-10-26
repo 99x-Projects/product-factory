@@ -20,8 +20,8 @@ The whole project climbs together. A client is a point on this grid, not a rung 
 | Variant | What it is | Human role |
 |---|---|---|
 | **1. AI-DLC series AI-Human workflows** | Separate workflows, each done by a human, by AI, or by either. Little connection between them. | Operator of each step |
-| **2. Multi-layer process with sectorial loops** | A human layer above an AI layer, linked by actionable observability. Each loop is a sector of the lifecycle. | Reviewer of recommended actions |
-| **3. The cockpit process** | AI wraps the whole process. The human sits at the centre, steering and intervening. | Supervisor, sets intent and handles exceptions |
+| **2. Multi-layer process with stage loops** | A human layer above an AI layer, linked by actionable observability. Each loop covers one stage of the lifecycle. | Reviewer of recommended actions |
+| **3. The cockpit process** | AI systems do the work across the process. The human at the centre monitors and corrects course continuously, using AI tools to observe, get recommendations, steer and correct. | Supervisor in the cockpit |
 
 ### Actionable observability
 The platform shows information about what the AI layer is doing, then offers recommended actions the human can take through the portal to correct course. It is a sense, recommend, act loop, not a dashboard. This link is what makes variant 2 different from variant 1.
@@ -45,7 +45,7 @@ The four pillars stay common to every variant. They are the quality attributes o
 3. Available budget
 4. The capability of the available tools (this one changes over time without client action)
 
-**Graduation** is decided by evidence. A loop moves up when humans accept its recommended actions at a high rate, sustained over time. Loops graduate independently, so a project can have some sectors at the cockpit level while others are still at variant 2.
+**Graduation** is decided by evidence. A loop moves up when humans accept its recommended actions at a high rate, sustained over time. Loops graduate independently, so a project can have some stages at the cockpit level while others are still at variant 2.
 
 ## 5. Open questions
 
