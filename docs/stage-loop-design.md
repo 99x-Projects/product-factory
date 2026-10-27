@@ -63,13 +63,12 @@ The validator can reliably check structure (traceability, consistency, coverage 
 
 ## 4. Cross-sub-loop consistency (proposed)
 
-With five separate sub-loops, the biggest risk is that the architectures drift apart, since no single sub-loop sees the others. The cross-architecture consistency check therefore cannot live inside any one sub-loop. It has to run at the level of the whole design stage, reading all five artifacts, and surface its findings to the human who owns each affected sub-loop. Like every stage loop, it is owned by a human.
+With five separate sub-loops, the biggest risk is that the architectures drift apart, since no single sub-loop sees the others. The cross-architecture consistency check therefore cannot live inside any one sub-loop. It has to run at the level of the whole design stage, reading all five artifacts, and surface its findings to the human who owns each affected sub-loop. The check is owned by the engineering manager of the project, who routes findings to the architects and designers who own the affected sub-loops.
 
 Design sub-loops also depend on each other. A plausible order is business, then software and data, then infrastructure, with UI/UX drawing on requirements and business architecture. This order needs confirming.
 
 ## 5. Open questions
 
-- Which human role owns the cross-sub-loop consistency check (ownership stays with humans), for example a lead architect?
 - What is the dependency order between the five sub-loops, and can they run in parallel?
 - What is "unacceptable" for each attribute, and who sets it per client?
 - If a client plugs in only one sub-loop (for example UI/UX), what must they bring from the others?
