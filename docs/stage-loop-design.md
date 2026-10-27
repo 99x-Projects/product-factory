@@ -57,7 +57,7 @@ Check: **M** = mechanical, **H** = hybrid, **J** = needs human judgment.
 
 ## 3. Signal design
 
-Same as the requirements loop: the portal shows per-attribute trends, warns when an attribute reaches an unacceptable level, and recommends corrective actions. The human decides what to do and when the design is ready for the next stage. The validator is a Xianix agent on a stronger model, and its quality is tracked by the acceptance rate of its recommendations.
+Same as the requirements loop: the portal shows per-attribute trends, escalates every declining attribute to the human who owns it, with higher severity for unacceptable levels, and recommends corrective actions. The human decides what to do and when the design is ready for the next stage. The validator is a Xianix agent on a stronger model, and its quality is tracked by the acceptance rate of its recommendations.
 
 The validator can reliably check structure (traceability, consistency, coverage of quality requirements, recorded decisions). It cannot reliably judge whether an architecture is good. The interface should show which signals are mechanical and which are advisory.
 

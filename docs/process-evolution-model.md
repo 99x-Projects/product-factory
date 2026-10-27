@@ -29,6 +29,7 @@ The platform shows information about what the AI layer is doing, then offers rec
 ### Stage loop specs
 - [Requirements stage loop](stage-loop-requirements.md)
 - [Design stage loop](stage-loop-design.md)
+- [Build stage loop](stage-loop-build.md)
 
 ## 3. Quality attributes (the four pillars)
 
@@ -50,6 +51,8 @@ The four pillars stay common to every variant. They are the quality attributes o
 4. The capability of the available tools (this one changes over time without client action)
 
 **Ownership.** Every stage loop is owned by humans, at every variant and at every level of AI autonomy. AI validates, warns and recommends. Humans decide.
+
+**Escalation.** In every stage loop, any quality attribute that is going down is escalated to the human, not only those that reach an unacceptable level. In the build loop, failing unit tests are escalated too. The human selects the corrective action.
 
 **Graduation** is decided by evidence. A loop moves up when humans accept its recommended actions at a high rate, sustained over time. Loops graduate individually, so a project can have some stages at the cockpit level while others are still at variant 2. Stage loops are chained along the coverage axis, so a downstream loop depends on the quality of the artifacts upstream loops produce.
 

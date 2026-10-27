@@ -18,16 +18,16 @@ Items marked **(proposed)** were suggested during the brainstorm and are not yet
 | **Feeders (human and AI)** | Meeting transcripts, notes, illustrations and other inputs added by the team and by AI |
 | **Quality attributes** | Section 3 |
 | **Background validator** | A Xianix agent running on a stronger model. It checks every growth step of the knowledge base against the quality attributes. |
-| **Signal** | Per-attribute trend (improving, stable, deteriorating) plus warnings for unacceptable attributes |
+| **Signal** | Per-attribute trend (improving, stable, declining). Every declining attribute is escalated to the human. |
 | **Recommended actions** | When an attribute deteriorates, the tool shows it and recommends actions to correct course |
-| **Human** | Decides what to do and when the knowledge base is ready for the next stage. AI warns but does not decide. |
+| **Human** | Acts on every escalation by selecting a corrective action, and decides when the knowledge base is ready for the next stage. AI warns but does not decide. |
 
 ## 2. How the loop runs
 
 1. Humans and AI add material to the knowledge base.
 2. The validator checks the change against the quality attributes.
 3. The portal shows attribute trends. If any attribute is deteriorating, it says so and recommends corrective actions.
-4. The human acts (accepts, modifies or rejects each recommendation).
+4. The human acts on every escalation by selecting a corrective action.
 5. Repeat continuously.
 
 Whether recommendations are accepted is recorded. The acceptance rate is the evidence for graduating this loop toward the cockpit (see the process evolution model) and for calibrating the validator.
@@ -53,9 +53,10 @@ Note: 1 and 2 overlap, and 4 is close to 12. Revisit if the validator cannot tel
 ## 4. Signal design
 
 - **Trend over score.** The loop alerts on direction (for example "organization is deteriorating") and avoids false precision in absolute scores. This is deliberate: some attributes are mechanically checkable (contradictions, open ends) while others are judgment calls (clarity).
-- **Warnings for unacceptable levels.** The validator warns the human when an attribute reaches an unacceptable level.
+- **Escalation on any decline.** Every attribute that is going down is escalated to the human. This applies to all stage loops. Unacceptable levels carry a higher severity.
 - **The human decides.** Warnings do not block the work or declare the stage complete. Readiness for the next stage is a human decision. Ownership of this loop, as for every stage loop, stays with humans.
-- **(proposed)** What counts as "unacceptable" should be defined per attribute, and probably per client.
+- **(proposed)** What counts as "unacceptable" (severity) should be defined per attribute, and probably per client.
+- **(proposed)** What counts as a decline should be defined by a tolerance and a time window per attribute, so that small fluctuations do not flood the human. Escalations should be grouped and ranked by severity.
 
 ## 5. The validator
 
