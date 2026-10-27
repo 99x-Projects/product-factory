@@ -26,6 +26,10 @@ The whole project climbs together. A client is a point on this grid, not a rung 
 ### Actionable observability
 The platform shows information about what the AI layer is doing, then offers recommended actions the human can take through the portal to correct course. It is a sense, recommend, act loop, not a dashboard. This link is what makes variant 2 different from variant 1.
 
+### Stage loop specs
+- [Requirements stage loop](stage-loop-requirements.md)
+- [Design stage loop](stage-loop-design.md)
+
 ## 3. Quality attributes (the four pillars)
 
 The four pillars stay common to every variant. They are the quality attributes of the process. What changes between variants is how each one is delivered.
@@ -45,7 +49,9 @@ The four pillars stay common to every variant. They are the quality attributes o
 3. Available budget
 4. The capability of the available tools (this one changes over time without client action)
 
-**Graduation** is decided by evidence. A loop moves up when humans accept its recommended actions at a high rate, sustained over time. Loops graduate independently, so a project can have some stages at the cockpit level while others are still at variant 2.
+**Ownership.** Every stage loop is owned by humans, at every variant and at every level of AI autonomy. AI validates, warns and recommends. Humans decide.
+
+**Graduation** is decided by evidence. A loop moves up when humans accept its recommended actions at a high rate, sustained over time. Loops graduate individually, so a project can have some stages at the cockpit level while others are still at variant 2. Stage loops are chained along the coverage axis, so a downstream loop depends on the quality of the artifacts upstream loops produce.
 
 ## 5. Open questions
 
