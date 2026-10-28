@@ -76,7 +76,7 @@ The codebase is read by the later stages: test, release and operate. Each change
 ## 5. Open questions
 
 - **(proposed)** What counts as a decline should be defined by a tolerance and a time window per attribute, so that small fluctuations across 15 attributes do not flood the human. Escalations should be grouped and ranked by severity.
-- The by-exception model applies to every stage loop (see the process evolution model). Working by exception is close to the cockpit variant, so how do the stage loops differ from the cockpit once all of them escalate by exception?
+- The by-exception model applies to every stage loop (see the process evolution model).
 - What is "unacceptable" for each attribute, and who sets it per client?
 - Tooling differs per technology stack. How does the validator get the right tools per language and framework, given the diverse stacks 99x teams work with?
 - How does this connect to the existing AI-DLC workflows in xianix-team/ai-dlc-base?
