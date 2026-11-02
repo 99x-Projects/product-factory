@@ -32,6 +32,7 @@ The platform shows information about what the AI layer is doing, then offers rec
 - [Build stage loop](stage-loop-build.md)
 - [Test stage loop](stage-loop-test.md)
 - [Release stage loop](stage-loop-release.md)
+- [Operate stage loop](stage-loop-operate.md)
 
 ## 3. Quality attributes (the four pillars)
 
