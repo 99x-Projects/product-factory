@@ -20,7 +20,7 @@ The whole project climbs together. A client is a point on this grid, not a rung 
 | Variant | What it is | Human role |
 |---|---|---|
 | **1. AI-DLC series AI-Human workflows** | Separate workflows, each done by a human, by AI, or by either. Little connection between them. | Operator of each step |
-| **2. Multi-layer process with stage loops** | A human layer above an AI layer, linked by actionable observability. Each loop covers one stage of the lifecycle. | Reviewer of recommended actions |
+| **2. Multi-layer process with stage loops** | A human layer above an AI layer, linked by actionable observability. Each loop covers one stage of the lifecycle. | Acts on escalations: every declining quality attribute and failing test, selecting corrective actions |
 | **3. The cockpit process** | AI systems do the work across the process. The human at the centre monitors and corrects course continuously, using AI tools to observe, get recommendations, steer and correct. | Supervisor in the cockpit |
 
 ### Actionable observability
@@ -42,7 +42,7 @@ The four pillars stay common to every variant. They are the quality attributes o
 |---|---|---|---|
 | **Provable delivery** | Per-workflow output metrics | Loop-level outcomes via observability | End-to-end outcome telemetry |
 | **Value transparency** *(working name; was "shared-gain commercials")* | Effort saved, estimated | Measured per loop | Priced on outcomes |
-| **Controlled autonomy** *(includes context grounding)* | Human approves every step | Human approves recommended actions | Human sets intent and exceptions |
+| **Controlled autonomy** *(includes context grounding)* | Human approves every step | Human acts on escalations and selects corrective actions | Human sets intent and exceptions |
 | **Trust and continuity** | Standard access controls | Auditable action trail | Full audit, replay, exit path |
 
 ## 4. What decides a client's position
@@ -63,6 +63,6 @@ The four pillars stay common to every variant. They are the quality attributes o
 
 - What acceptance rate and time window count as "ready to graduate" a loop? (placeholder: to be set from pilot data)
 - Is the cockpit the destination for every client? Current stance: yes, for clients who want the fully autonomous factory with human oversight. Others may stay where they are.
-- Does the grid need a named set of coverage modules (requirements, build, test, release, operate...)? And in what order should they plug in?
+- The coverage modules are the six stage loops (requirements, design, build, test, release, operate). In what order should they plug in, and what is the minimum contract for a client who starts mid-chain and brings their own upstream artifacts?
 - How often does 99x reassess the achievable variant per client as tools improve?
 - Pillar 2 wording: "value transparency" is a working name.
