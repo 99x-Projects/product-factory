@@ -84,6 +84,22 @@ Principles that apply to every loop:
 - **Loops are chained along the coverage axis,** and each produces artifacts needed for product delivery.
 - **Consequential decisions stay explicit and human:** readiness to move to the next stage (requirements and design), the trust endorsement (test), and go-live (release).
 
+### Why an independent validator, and not checks inside the primary tool or agent
+
+The agent or tool that does the work should not be the only thing that judges it. The pattern keeps the quality attribute checks in hosted Xianix agents, outside the delivery tools, for these reasons:
+
+1. **Independence.** A worker that checks its own output shares its blind spots and context. A separate validator, on a stronger model with its own context, catches what the worker misses. Independent evidence also supports the *provable delivery* pillar, because clients trust it more than self-assessment.
+2. **Tool neutrality.** AI tools change every few months and differ between clients. The attributes stay stable while the tools are swapped, and nothing has to be rebuilt.
+3. **One measurement across every source of change.** The artifact is changed by several AI tools and by hand. A check inside one tool only sees that tool's changes. A validator watching the artifact sees all of them, including manual edits.
+4. **Trend, not point checks.** Drift is a property of the artifact over time. Measuring it needs persistent history, which belongs in a hosted service and not in a tool session.
+5. **Consistent attributes.** The attributes are defined once per stage loop and applied the same way to every contributor and tool, instead of being configured separately per tool.
+6. **The validator can be measured and improved.** Its acceptance rate is the evidence used to graduate a loop, and its model can be upgraded without touching the delivery tools.
+7. **Clear human accountability.** Every drift lands in one place, the AI-Hub, so the pilot does not have to hunt for signals and the escalation principle can be guaranteed.
+
+**In-tool checks still have a place.** Fast, cheap, local feedback such as linting, formatting and unit tests belongs in the tool, so the agent can self-correct before committing. The two are complementary: in-tool checks keep the work tight in the moment, and also act as deterministic inputs to the hosted validator, which provides the independent, trend-based view.
+
+**The cost.** This is more to build and run (a hosted service, integrations that observe changes, the AI-Hub), there is some latency between a change and its drift report, and validator quality becomes something we must own and prove. That is why loops graduate by evidence: a client who only needs quick in-tool checks can stay there, and clients who want provable, tool-independent quality move to the full loop.
+
 ## 4. The six stage loops
 
 | Stage | Governed artifact | Humans | Quality attributes | Spec | Diagram |
