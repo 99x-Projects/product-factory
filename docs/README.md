@@ -62,6 +62,10 @@ The full model is in [process-evolution-model.md](process-evolution-model.md). T
 
 ## 3. The stage loop pattern
 
+![The stage loop pattern](stage-loop-pattern.png)
+
+*A human pilot works with AI tools and by hand. Hosted quality agents in Xianix measure drift in the defined quality attributes and report it to the AI-Hub, with recommended actions where possible. The dashed band shows the next step: actionable observability through an MCP integration. Source: [svg](stage-loop-pattern.svg).*
+
 Every stage loop follows the same pattern:
 
 > A governed artifact + quality attributes + a background validator + trend signals + recommended actions, with humans who act and decide.
@@ -122,13 +126,14 @@ How the loops connect:
 | [process-evolution-model.md](process-evolution-model.md) | The model: variants, pillars, ownership, escalation and graduation |
 | [process-evolution-model-v2.png](process-evolution-model-v2.png) · [svg](process-evolution-model-v2.svg) | The model diagram |
 | [process-evolution-model.png](process-evolution-model.png) | The original sketch |
+| [stage-loop-pattern.png](stage-loop-pattern.png) · [svg](stage-loop-pattern.svg) | The generic stage loop pattern diagram |
 | [stage-loop-requirements.md](stage-loop-requirements.md) | Requirements stage loop spec |
 | [stage-loop-design.md](stage-loop-design.md) | Design stage loop spec |
 | [stage-loop-build.md](stage-loop-build.md) | Build stage loop spec |
 | [stage-loop-test.md](stage-loop-test.md) | Test stage loop spec |
 | [stage-loop-release.md](stage-loop-release.md) | Release stage loop spec |
 | [stage-loop-operate.md](stage-loop-operate.md) | Operate stage loop spec |
-| `stage-loop-*.png` and `stage-loop-*.svg` | One diagram per stage loop, linked in the table above |
+| `stage-loop-<stage>.png` and `.svg` | One diagram per stage loop, linked in the table above |
 | [research/](research/) | Reserved for research material (empty for now) |
 
 ## 7. Editing the diagrams
